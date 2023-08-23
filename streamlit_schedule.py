@@ -144,6 +144,9 @@ country_flags = {
     "Netherlands": "nl.png",
     "Belgium": "be.png",
     "Denmark": "dk.png",
+    "Germany": "de.png",
+    "Germany Amateur": "de.png",
+    "Europe": "eu.png",
 }
 
 # Display filtered and sorted data as cards per day
@@ -152,7 +155,7 @@ for date, group in grouped_by_day:
     st.markdown(f"<h2 style = 'font-size: 22px; border-bottom: 1px solid #f79b9b; margin-bottom: 10px;'>{date.strftime('%A, %B %d, %Y')}</h2>", unsafe_allow_html=True)
     
     for index, row in group.iterrows():
-        col1, col2, col3, col4 = st.columns([0.05, 0.4, 0.25, 0.95])
+        col1, col2, col3, col4 = st.columns([0.05, 0.25, 0.2, 0.5])
 
         # Display the flag image in col1
         flag_filename = country_flags.get(row['country'])
